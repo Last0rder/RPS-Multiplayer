@@ -2,18 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Rock Paper Scissors</title>
+	<title>Train Tracker</title>
 
 	<!-- CSS Reset -->
 	<link rel="stylesheet" href="assets/css/reset.css">
-	
-	<!-- Javascript -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="assets/java/app.js"></script>
-	
-	<!-- Firebase -->
-	<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
-
 	
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -21,16 +13,72 @@
 	<!-- CSS Style -->
 	<link rel="stylesheet" href="assets/css/style.css">
 
+	
+
 </head>
 <body>
-	<div class="jumbotron">
-  <div class="container">
-    Rock Paper Scissors
-  </div>
-</div>
-<div class="container">
+	<div class="container">
+		<div class="row">
+			<div class="col-12-md">
+				<div class="jumbotron text-center">
+					<h1>Train Tracker</h1>
+				</div>
+			</div>
+		</div>
+	
+		<div class="row">
+			<div class="col-12-md">
+				<div class="panel panel-default">
+					<div class="panel-heading">Train Schedule</div>
+						<table class="table" id="trainSched">
+						<tr>
+						<th>Train Name</th>
+						<th>Destination</th>
+						<th>Frequency (min)</th>
+						<th>Next Arrival</th>
+						<th>Minutes Away</th>
+						</tr>
+						</table>
+				</div>
+			</div>
+		</div>
 		
-</div>
+		<div class="row">
+			<div class="col-12-md">
+				<div class="panel panel-default">
+					<div class="panel-heading">Add Train</div>
+						<div class="panel-body">
+							<form role="form">
+								<div class="form-group">
+									<label for="tName">Train Name:</label>
+									<input type="text" class="form-control" id="tName">
+								</div>
+								<div class="form-group">
+									<label for="tDestination">Destination:</label>
+									<input type="text" class="form-control" id="tDest">
+								</div>
+								<div class="form-group">
+									<label for="tFirstTime">First Train Time (HH:mm - military time):</label>
+									<input type="text" class="form-control" id="tFirst">
+								</div>
+								<div class="form-group">
+									<label for="tFrequency">Frequency (min):</label>
+									<input type="text" class="form-control" id="tFreq">
+								</div>
+								<button type="submit" class="btn btn-default" id="trainInfo">Submit Train</button>
+							</form>
+						</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
 
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="assets/java/app.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.15.0/moment.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+
 </html>
